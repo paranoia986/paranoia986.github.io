@@ -1,0 +1,14 @@
+baseURL = "https://paranoia986.github.io/"
+languageCode = "zh-cn"
+title = "我的学习笔记"
+theme = "PaperMod"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "GeeRPC"
+    url = "/posts/geerpc"
+    weight = 20
