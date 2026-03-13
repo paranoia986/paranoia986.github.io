@@ -3,12 +3,50 @@ languageCode = "zh-cn"
 title = "我的学习笔记"
 theme = "PaperMod"
 
+[author]
+  name = "paranoia986"
+
+[params]
+  author = "paranoia986"
+  math = true
+  
+  # 界面显示设置
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+
+  # 搜索与 SEO 配置 (如果以后开启搜索功能需用到)
+  # fuseOpts = { isCaseSensitive = false, shouldSort = true, location = 0, distance = 100, threshold = 0.4, minMatchCharLength = 0, keys = ["title", "permalink", "summary", "content"] }
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true 
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['$$', '$$'], ['\\[', '\\]']]
+        inline = [['$', '$'], ['\\(', '\\)']]
+
 [menu]
   [[menu.main]]
     name = "首页"
     url = "/"
     weight = 10
+
   [[menu.main]]
     name = "GeeRPC"
-    url = "/posts/geerpc"
+    url = "/posts/geerpc/"
     weight = 20
+
+  [[menu.main]]
+    name = "TinyWebServer"
+    url = "/posts/tinywebserver/"
+    weight = 30
+
+# ============================================================
+# 5. 万能补丁 (如果 RSS 依然报错，请取消下面这行的注释)
+# ============================================================
+# disableKinds = ["RSS"]
